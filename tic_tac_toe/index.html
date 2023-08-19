@@ -37,8 +37,11 @@
 <script>
     var player = 0
     var player_name = ['X', 'O']
-    function choose(box){
-        elem = document.getElementById('k'+box)
+    // THE BOXES ARRAY
+    var boxes = ['', '', '', '', '', '', '', '', '']
+
+    function choose(box_index){
+        elem = document.getElementById('k'+box_index)
         if (elem.textContent != ""){
             alert("already filled")
             return
@@ -46,12 +49,20 @@
         if (player == 0 ){
             elem.textContent = "X"
             player = 1
+            // TODO
+            // insert boxes with box_index
         }
         else
         {
             elem.textContent = "O"
             player = 0
+            // TODO
+            // insert boxes with box_index
         }
+        // TODO
+        // write check winner script
+        // if winnner found, display it at the bottom of table
+
         document.getElementById('player').textContent = player_name[player]
     }
     document.getElementById('player').textContent = player_name[player]
