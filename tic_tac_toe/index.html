@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td id="k0" onclick="choose(0)" ></td>
+      <td id="k1" onclick="choose(1)" ></td>
+      <td id="k2" onclick="choose(2)" ></td>
+    </tr>
+    <tr>
+        <td id="k3" onclick="choose(3)" ></td>
+        <td id="k4" onclick="choose(4)" ></td>
+        <td id="k5" onclick="choose(5)" ></td>
+    </tr>
+    <tr>
+        <td id="k6" onclick="choose(6)" ></td>
+        <td id="k7" onclick="choose(7)" ></td>
+        <td id="k8" onclick="choose(8)" ></td>
+    </tr>
+  </table>
+</body>
+<script>
+    var player = 0
+    function choose(box){
+        elem = document.getElementById('k'+box)
+        if (elem.textContent != ""){
+            alert("already filled")
+            return
+        }
+        if (player == 0 ){
+            elem.textContent = "X"
+            player = 1
+        }
+        else
+        {
+            elem.textContent = "O"
+            player = 0
+        }
+        console.log('CURRENT PLAYER : PLAYER '+ player)
+    }
+    console.log('CURRENT PLAYER : PLAYER '+ player)
+
+</script>
+</html>
