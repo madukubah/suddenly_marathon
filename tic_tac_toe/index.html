@@ -15,6 +15,7 @@
   </style>
 </head>
 <body>
+    <p>CURRENT PLAYER : <span id="player"></span> </p>
   <table>
     <tr>
       <td id="k0" onclick="choose(0)" ></td>
@@ -35,6 +36,7 @@
 </body>
 <script>
     var player = 0
+    var player_name = ['X', 'O']
     function choose(box){
         elem = document.getElementById('k'+box)
         if (elem.textContent != ""){
@@ -50,9 +52,8 @@
             elem.textContent = "O"
             player = 0
         }
-        console.log('CURRENT PLAYER : PLAYER '+ player)
+        document.getElementById('player').textContent = player_name[player]
     }
-    console.log('CURRENT PLAYER : PLAYER '+ player)
-
+    document.getElementById('player').textContent = player_name[player]
 </script>
 </html>
